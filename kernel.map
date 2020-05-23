@@ -1,0 +1,351 @@
+Archive member included because of file (symbol)
+
+/usr/lib/gcc/arm-none-eabi/4.9.3/libgcc.a(_udivsi3.o)
+                              /home/rtos18007/rtos18007/FreeRTOS_RaspPi/build/Demo/Drivers/print_473.o (__aeabi_uidiv)
+/usr/lib/gcc/arm-none-eabi/4.9.3/libgcc.a(_dvmd_tls.o)
+                              /usr/lib/gcc/arm-none-eabi/4.9.3/libgcc.a(_udivsi3.o) (__aeabi_idiv0)
+/usr/arm-none-eabi/lib/thumb/libc.a(lib_a-memcpy.o)
+                              /home/rtos18007/rtos18007/FreeRTOS_RaspPi/build/FreeRTOS/Source/queue.o (memcpy)
+/usr/arm-none-eabi/lib/thumb/libc.a(lib_a-memset.o)
+                              /home/rtos18007/rtos18007/FreeRTOS_RaspPi/build/FreeRTOS/Source/tasks.o (memset)
+/usr/arm-none-eabi/lib/thumb/libc.a(lib_a-strncpy.o)
+                              /home/rtos18007/rtos18007/FreeRTOS_RaspPi/build/FreeRTOS/Source/tasks.o (strncpy)
+
+Memory Configuration
+
+Name             Origin             Length             Attributes
+RESERVED         0x0000000000000000 0x0000000000008000 r
+INIT_RAM         0x0000000000008000 0x0000000000008000 xrw
+RAM              0x0000000000010000 0x0000000008000000 xrw
+*default*        0x0000000000000000 0xffffffffffffffff
+
+Linker script and memory map
+
+LOAD /home/rtos18007/rtos18007/FreeRTOS_RaspPi/build/FreeRTOS/Source/portable/GCC/RaspberryPi/port.o
+LOAD /home/rtos18007/rtos18007/FreeRTOS_RaspPi/build/FreeRTOS/Source/portable/GCC/RaspberryPi/portisr.o
+LOAD /home/rtos18007/rtos18007/FreeRTOS_RaspPi/build/FreeRTOS/Source/croutine.o
+LOAD /home/rtos18007/rtos18007/FreeRTOS_RaspPi/build/FreeRTOS/Source/list.o
+LOAD /home/rtos18007/rtos18007/FreeRTOS_RaspPi/build/FreeRTOS/Source/queue.o
+LOAD /home/rtos18007/rtos18007/FreeRTOS_RaspPi/build/FreeRTOS/Source/priority_queue.o
+LOAD /home/rtos18007/rtos18007/FreeRTOS_RaspPi/build/FreeRTOS/Source/tasks.o
+LOAD /home/rtos18007/rtos18007/FreeRTOS_RaspPi/build/Demo/Drivers/interrupts.o
+LOAD /home/rtos18007/rtos18007/FreeRTOS_RaspPi/build/Demo/Drivers/gpio.o
+LOAD /home/rtos18007/rtos18007/FreeRTOS_RaspPi/build/Demo/Drivers/uart.o
+LOAD /home/rtos18007/rtos18007/FreeRTOS_RaspPi/build/Demo/Drivers/print_473.o
+LOAD /home/rtos18007/rtos18007/FreeRTOS_RaspPi/build//FreeRTOS/Source/portable/MemMang/heap_4.o
+LOAD /home/rtos18007/rtos18007/FreeRTOS_RaspPi/build/Demo/startup.o
+LOAD /home/rtos18007/rtos18007/FreeRTOS_RaspPi/build/Demo/main.o
+
+.init           0x0000000000008000       0xa4
+ *(.init)
+ .init          0x0000000000008000       0xa4 /home/rtos18007/rtos18007/FreeRTOS_RaspPi/build/Demo/startup.o
+                0x0000000000008000                _start
+
+.module_entries
+                0x00000000000080a4        0x0
+                0x00000000000080a4                __module_entries_start = .
+ *(.module_entries)
+ *(.module_entries.*)
+                0x00000000000080a4                __module_entries_end = .
+                0x0000000000000000                __module_entries_size = SIZEOF (.module_entries)
+
+.text           0x0000000000010000     0x69f0
+ *(.text)
+ .text          0x0000000000010000      0x338 /home/rtos18007/rtos18007/FreeRTOS_RaspPi/build/FreeRTOS/Source/portable/GCC/RaspberryPi/port.o
+                0x0000000000010000                pxPortInitialiseStack
+                0x0000000000010240                xPortStartScheduler
+                0x000000000001025c                vPortEndScheduler
+                0x0000000000010270                vTickISR
+ .text          0x0000000000010338      0x298 /home/rtos18007/rtos18007/FreeRTOS_RaspPi/build/FreeRTOS/Source/portable/GCC/RaspberryPi/portisr.o
+                0x0000000000010338                vPortISRStartFirstTask
+                0x00000000000103cc                vPortYieldProcessor
+                0x000000000001047c                vFreeRTOS_ISR
+                0x0000000000010528                vPortEnterCritical
+                0x0000000000010568                vPortExitCritical
+ .text          0x00000000000105d0      0x754 /home/rtos18007/rtos18007/FreeRTOS_RaspPi/build/FreeRTOS/Source/croutine.o
+                0x00000000000105d0                xCoRoutineCreate
+                0x0000000000010738                vCoRoutineAddToDelayedList
+                0x0000000000010acc                vCoRoutineSchedule
+                0x0000000000010c98                xCoRoutineRemoveFromEventList
+ .text          0x0000000000010d24      0x288 /home/rtos18007/rtos18007/FreeRTOS_RaspPi/build/FreeRTOS/Source/list.o
+                0x0000000000010d24                vListInitialise
+                0x0000000000010d88                vListInitialiseItem
+                0x0000000000010db0                vListInsertEnd
+                0x0000000000010e44                vListInsert
+                0x0000000000010f18                vListRemove
+ .text          0x0000000000010fac      0xbbc /home/rtos18007/rtos18007/FreeRTOS_RaspPi/build/FreeRTOS/Source/queue.o
+                0x0000000000010fac                xQueueGenericReset
+                0x00000000000110c0                xQueueGenericCreate
+                0x0000000000011188                xQueueGenericSend
+                0x0000000000011334                xQueueGenericSendFromISR
+                0x0000000000011410                xQueueGenericReceive
+                0x000000000001161c                xQueueReceiveFromISR
+                0x00000000000116fc                uxQueueMessagesWaiting
+                0x0000000000011730                uxQueueMessagesWaitingFromISR
+                0x0000000000011760                vQueueDelete
+                0x0000000000011a94                xQueueIsQueueEmptyFromISR
+                0x0000000000011b20                xQueueIsQueueFullFromISR
+ .text          0x0000000000011b68      0xe78 /home/rtos18007/rtos18007/FreeRTOS_RaspPi/build/FreeRTOS/Source/priority_queue.o
+                0x0000000000011b68                xPriorityQueueCreate
+                0x0000000000011c88                xPriorityQueueReset
+                0x0000000000011dfc                xPriorityQueueGenericSend
+                0x0000000000011fb4                prvCopyDataToPriorityQueue
+                0x0000000000012098                prvIsPriorityQueueFull
+                0x00000000000120f0                prvUnlockPriorityQueue
+                0x00000000000121f0                xPriorityQueueGenericReceive
+                0x00000000000124dc                prvCopyDataFromPriorityQueue
+                0x00000000000125c4                prvIsPriorityQueueEmpty
+                0x0000000000012644                vPriorityQueueDelete
+                0x000000000001269c                uxPriorityQueueTotalMessagesWaiting
+                0x0000000000012708                uxPriorityQueueMessagesWaiting
+                0x000000000001273c                xPriorityQueueGenericSendFromISR
+                0x0000000000012820                xPriorityQueueGenericReceiveFromISR
+ .text          0x00000000000129e0     0x1f34 /home/rtos18007/rtos18007/FreeRTOS_RaspPi/build/FreeRTOS/Source/tasks.o
+                0x00000000000129e0                xTaskGenericCreate
+                0x0000000000012ca8                vTaskDelete
+                0x0000000000012da4                vTaskDelayUntil
+                0x0000000000012eb0                vTaskDelay
+                0x0000000000012f30                uxTaskPriorityGet
+                0x0000000000012f88                vTaskPrioritySet
+                0x000000000001312c                vTaskSuspend
+                0x000000000001322c                xTaskIsTaskSuspended
+                0x00000000000132a8                vTaskResume
+                0x000000000001339c                xTaskResumeFromISR
+                0x00000000000134b8                vTaskStartScheduler
+                0x000000000001356c                vTaskEndScheduler
+                0x00000000000135a0                vTaskSuspendAll
+                0x00000000000135cc                xTaskResumeAll
+                0x0000000000013770                xTaskGetTickCount
+                0x00000000000137a4                xTaskGetTickCountFromISR
+                0x00000000000137dc                uxTaskGetNumberOfTasks
+                0x0000000000013800                vTaskIncrementTick
+                0x0000000000013f88                vTaskSetApplicationTaskTag
+                0x0000000000013fe0                xTaskGetApplicationTaskTag
+                0x000000000001403c                xTaskCallApplicationTaskHook
+                0x00000000000140b8                vTaskSwitchContext
+                0x00000000000141c0                vTaskPlaceOnEventList
+                0x0000000000014258                xTaskRemoveFromEventList
+                0x0000000000014370                vTaskSetTimeOutState
+                0x00000000000143b4                xTaskCheckForTimeOut
+                0x00000000000144a8                vTaskMissedYield
+                0x00000000000144cc                uxTaskGetTaskNumber
+ .text          0x0000000000014914      0x434 /home/rtos18007/rtos18007/FreeRTOS_RaspPi/build/Demo/Drivers/interrupts.o
+                0x0000000000014954                irqHandler
+                0x0000000000014a88                InitInterruptController
+                0x0000000000014afc                RegisterInterrupt
+                0x0000000000014b78                EnableInterrupt
+                0x0000000000014c48                DisableInterrupt
+                0x0000000000014d18                EnableInterrupts
+                0x0000000000014d30                DisableInterrupts
+ .text          0x0000000000014d48      0x738 /home/rtos18007/rtos18007/FreeRTOS_RaspPi/build/Demo/Drivers/gpio.o
+                0x0000000000014d48                SetGpioFunction
+                0x0000000000014e20                SetGpioDirection
+                0x0000000000014e50                SetGpio
+                0x0000000000014ed4                ReadGpio
+                0x0000000000014f24                PudGpio
+                0x0000000000015018                PudMultiGpio
+                0x00000000000150d4                EnableGpioDetect
+                0x000000000001527c                DisableGpioDetect
+                0x000000000001542c                ClearGpioInterrupt
+ .text          0x0000000000015480      0x3e8 /home/rtos18007/rtos18007/FreeRTOS_RaspPi/build/Demo/Drivers/uart.o
+                0x0000000000015480                PUT32
+                0x00000000000154ac                GET32
+                0x00000000000154d4                uart_putc
+                0x0000000000015520                uart_puts
+                0x0000000000015564                uart_putl
+                0x00000000000156e4                uart_getc
+                0x0000000000015728                uart_init
+ .text          0x0000000000015868      0x744 /home/rtos18007/rtos18007/FreeRTOS_RaspPi/build/Demo/Drivers/print_473.o
+                0x0000000000015ed8                printf_473
+                0x0000000000015f18                sprintf_473
+                0x0000000000015f60                snprintf_473
+ .text          0x0000000000015fac      0x49c /home/rtos18007/rtos18007/FreeRTOS_RaspPi/build//FreeRTOS/Source/portable/MemMang/heap_4.o
+                0x0000000000015fac                pvPortMalloc
+                0x0000000000016174                vPortFree
+                0x00000000000161ec                xPortGetFreeHeapSize
+                0x0000000000016210                vPortInitialiseBlocks
+ .text          0x0000000000016448       0x18 /home/rtos18007/rtos18007/FreeRTOS_RaspPi/build/Demo/startup.o
+ .text          0x0000000000016460      0x444 /home/rtos18007/rtos18007/FreeRTOS_RaspPi/build/Demo/main.o
+                0x0000000000016460                vTask31
+                0x000000000001651c                vTask62
+                0x00000000000165d8                vTask124
+                0x0000000000016694                main
+ .text          0x00000000000168a4      0x114 /usr/lib/gcc/arm-none-eabi/4.9.3/libgcc.a(_udivsi3.o)
+                0x00000000000168a4                __udivsi3
+                0x00000000000168a4                __aeabi_uidiv
+                0x0000000000016998                __aeabi_uidivmod
+ .text          0x00000000000169b8        0x4 /usr/lib/gcc/arm-none-eabi/4.9.3/libgcc.a(_dvmd_tls.o)
+                0x00000000000169b8                __aeabi_ldiv0
+                0x00000000000169b8                __aeabi_idiv0
+ .text          0x00000000000169bc        0x0 /usr/arm-none-eabi/lib/thumb/libc.a(lib_a-memcpy.o)
+ .text          0x00000000000169bc        0x0 /usr/arm-none-eabi/lib/thumb/libc.a(lib_a-memset.o)
+ .text          0x00000000000169bc        0x0 /usr/arm-none-eabi/lib/thumb/libc.a(lib_a-strncpy.o)
+ *fill*         0x00000000000169bc        0x4 
+ .text.__stub   0x00000000000169c0       0x24 linker stubs
+
+.rodata         0x00000000000169f0       0x77
+ .rodata        0x00000000000169f0        0x4 /home/rtos18007/rtos18007/FreeRTOS_RaspPi/build/FreeRTOS/Source/portable/GCC/RaspberryPi/port.o
+ .rodata        0x00000000000169f4        0x5 /home/rtos18007/rtos18007/FreeRTOS_RaspPi/build/FreeRTOS/Source/tasks.o
+ *fill*         0x00000000000169f9        0x3 
+ .rodata        0x00000000000169fc        0x4 /home/rtos18007/rtos18007/FreeRTOS_RaspPi/build/Demo/Drivers/interrupts.o
+ .rodata        0x0000000000016a00        0x4 /home/rtos18007/rtos18007/FreeRTOS_RaspPi/build/Demo/Drivers/gpio.o
+                0x0000000000016a00                pRegs
+ .rodata        0x0000000000016a04        0x7 /home/rtos18007/rtos18007/FreeRTOS_RaspPi/build/Demo/Drivers/print_473.o
+ *fill*         0x0000000000016a0b        0x1 
+ .rodata        0x0000000000016a0c        0x8 /home/rtos18007/rtos18007/FreeRTOS_RaspPi/build//FreeRTOS/Source/portable/MemMang/heap_4.o
+ .rodata        0x0000000000016a14       0x53 /home/rtos18007/rtos18007/FreeRTOS_RaspPi/build/Demo/main.o
+
+.glue_7         0x0000000000016a68        0x0
+ .glue_7        0x0000000000000000        0x0 linker stubs
+
+.glue_7t        0x0000000000016a68        0x0
+ .glue_7t       0x0000000000000000        0x0 linker stubs
+
+.vfp11_veneer   0x0000000000016a68        0x0
+ .vfp11_veneer  0x0000000000000000        0x0 linker stubs
+
+.v4_bx          0x0000000000016a68        0x0
+ .v4_bx         0x0000000000000000        0x0 linker stubs
+
+.iplt           0x0000000000016a68        0x0
+ .iplt          0x0000000000000000        0x0 /home/rtos18007/rtos18007/FreeRTOS_RaspPi/build/FreeRTOS/Source/portable/GCC/RaspberryPi/port.o
+
+.text.memcpy    0x0000000000016a68       0x80
+ .text.memcpy   0x0000000000016a68       0x80 /usr/arm-none-eabi/lib/thumb/libc.a(lib_a-memcpy.o)
+                0x0000000000016a68                memcpy
+
+.text.memset    0x0000000000016ae8       0x94
+ .text.memset   0x0000000000016ae8       0x94 /usr/arm-none-eabi/lib/thumb/libc.a(lib_a-memset.o)
+                0x0000000000016ae8                memset
+
+.text.strncpy   0x0000000000016b7c       0x7c
+ .text.strncpy  0x0000000000016b7c       0x7c /usr/arm-none-eabi/lib/thumb/libc.a(lib_a-strncpy.o)
+                0x0000000000016b7c                strncpy
+
+.rel.dyn        0x0000000000016bf8        0x0
+ .rel.iplt      0x0000000000000000        0x0 /home/rtos18007/rtos18007/FreeRTOS_RaspPi/build/FreeRTOS/Source/portable/GCC/RaspberryPi/port.o
+
+.data           0x0000000000016bf8        0xc
+ *(.data)
+ .data          0x0000000000016bf8        0x0 /home/rtos18007/rtos18007/FreeRTOS_RaspPi/build/FreeRTOS/Source/portable/GCC/RaspberryPi/port.o
+ .data          0x0000000000016bf8        0x4 /home/rtos18007/rtos18007/FreeRTOS_RaspPi/build/FreeRTOS/Source/portable/GCC/RaspberryPi/portisr.o
+                0x0000000000016bf8                ulCriticalNesting
+ .data          0x0000000000016bfc        0x0 /home/rtos18007/rtos18007/FreeRTOS_RaspPi/build/FreeRTOS/Source/croutine.o
+ .data          0x0000000000016bfc        0x0 /home/rtos18007/rtos18007/FreeRTOS_RaspPi/build/FreeRTOS/Source/list.o
+ .data          0x0000000000016bfc        0x0 /home/rtos18007/rtos18007/FreeRTOS_RaspPi/build/FreeRTOS/Source/queue.o
+ .data          0x0000000000016bfc        0x0 /home/rtos18007/rtos18007/FreeRTOS_RaspPi/build/FreeRTOS/Source/priority_queue.o
+ .data          0x0000000000016bfc        0x4 /home/rtos18007/rtos18007/FreeRTOS_RaspPi/build/FreeRTOS/Source/tasks.o
+ .data          0x0000000000016c00        0x0 /home/rtos18007/rtos18007/FreeRTOS_RaspPi/build/Demo/Drivers/interrupts.o
+ .data          0x0000000000016c00        0x0 /home/rtos18007/rtos18007/FreeRTOS_RaspPi/build/Demo/Drivers/gpio.o
+ .data          0x0000000000016c00        0x0 /home/rtos18007/rtos18007/FreeRTOS_RaspPi/build/Demo/Drivers/uart.o
+ .data          0x0000000000016c00        0x0 /home/rtos18007/rtos18007/FreeRTOS_RaspPi/build/Demo/Drivers/print_473.o
+ .data          0x0000000000016c00        0x4 /home/rtos18007/rtos18007/FreeRTOS_RaspPi/build//FreeRTOS/Source/portable/MemMang/heap_4.o
+ .data          0x0000000000016c04        0x0 /home/rtos18007/rtos18007/FreeRTOS_RaspPi/build/Demo/startup.o
+ .data          0x0000000000016c04        0x0 /home/rtos18007/rtos18007/FreeRTOS_RaspPi/build/Demo/main.o
+ .data          0x0000000000016c04        0x0 /usr/lib/gcc/arm-none-eabi/4.9.3/libgcc.a(_udivsi3.o)
+ .data          0x0000000000016c04        0x0 /usr/lib/gcc/arm-none-eabi/4.9.3/libgcc.a(_dvmd_tls.o)
+ .data          0x0000000000016c04        0x0 /usr/arm-none-eabi/lib/thumb/libc.a(lib_a-memcpy.o)
+ .data          0x0000000000016c04        0x0 /usr/arm-none-eabi/lib/thumb/libc.a(lib_a-memset.o)
+ .data          0x0000000000016c04        0x0 /usr/arm-none-eabi/lib/thumb/libc.a(lib_a-strncpy.o)
+
+.igot.plt       0x0000000000016c04        0x0
+ .igot.plt      0x0000000000000000        0x0 /home/rtos18007/rtos18007/FreeRTOS_RaspPi/build/FreeRTOS/Source/portable/GCC/RaspberryPi/port.o
+
+.bss            0x0000000000016c08     0x13d8
+                0x0000000000016c08                __bss_start = .
+ *(.bss)
+ .bss           0x0000000000016c08        0x0 /home/rtos18007/rtos18007/FreeRTOS_RaspPi/build/FreeRTOS/Source/portable/GCC/RaspberryPi/port.o
+ .bss           0x0000000000016c08        0x4 /home/rtos18007/rtos18007/FreeRTOS_RaspPi/build/FreeRTOS/Source/portable/GCC/RaspberryPi/portisr.o
+                0x0000000000016c08                g_bStarted
+ .bss           0x0000000000016c0c       0x80 /home/rtos18007/rtos18007/FreeRTOS_RaspPi/build/FreeRTOS/Source/croutine.o
+                0x0000000000016c78                pxCurrentCoRoutine
+ .bss           0x0000000000016c8c        0x0 /home/rtos18007/rtos18007/FreeRTOS_RaspPi/build/FreeRTOS/Source/list.o
+ .bss           0x0000000000016c8c        0x0 /home/rtos18007/rtos18007/FreeRTOS_RaspPi/build/FreeRTOS/Source/queue.o
+ .bss           0x0000000000016c8c        0x0 /home/rtos18007/rtos18007/FreeRTOS_RaspPi/build/FreeRTOS/Source/priority_queue.o
+ .bss           0x0000000000016c8c      0x100 /home/rtos18007/rtos18007/FreeRTOS_RaspPi/build/FreeRTOS/Source/tasks.o
+                0x0000000000016c8c                pxCurrentTCB
+ .bss           0x0000000000016d8c      0x240 /home/rtos18007/rtos18007/FreeRTOS_RaspPi/build/Demo/Drivers/interrupts.o
+ .bss           0x0000000000016fcc        0x0 /home/rtos18007/rtos18007/FreeRTOS_RaspPi/build/Demo/Drivers/gpio.o
+ .bss           0x0000000000016fcc        0x0 /home/rtos18007/rtos18007/FreeRTOS_RaspPi/build/Demo/Drivers/uart.o
+ .bss           0x0000000000016fcc        0x0 /home/rtos18007/rtos18007/FreeRTOS_RaspPi/build/Demo/Drivers/print_473.o
+ *fill*         0x0000000000016fcc        0x4 
+ .bss           0x0000000000016fd0     0x1010 /home/rtos18007/rtos18007/FreeRTOS_RaspPi/build//FreeRTOS/Source/portable/MemMang/heap_4.o
+                0x0000000000017fdc                allocated
+ .bss           0x0000000000017fe0        0x0 /home/rtos18007/rtos18007/FreeRTOS_RaspPi/build/Demo/startup.o
+ .bss           0x0000000000017fe0        0x0 /home/rtos18007/rtos18007/FreeRTOS_RaspPi/build/Demo/main.o
+ .bss           0x0000000000017fe0        0x0 /usr/lib/gcc/arm-none-eabi/4.9.3/libgcc.a(_udivsi3.o)
+ .bss           0x0000000000017fe0        0x0 /usr/lib/gcc/arm-none-eabi/4.9.3/libgcc.a(_dvmd_tls.o)
+ .bss           0x0000000000017fe0        0x0 /usr/arm-none-eabi/lib/thumb/libc.a(lib_a-memcpy.o)
+ .bss           0x0000000000017fe0        0x0 /usr/arm-none-eabi/lib/thumb/libc.a(lib_a-memset.o)
+ .bss           0x0000000000017fe0        0x0 /usr/arm-none-eabi/lib/thumb/libc.a(lib_a-strncpy.o)
+ *(.bss.*)
+                0x0000000000017fe0                __bss_end = .
+                0x0000000000010000                heap_low = ORIGIN (RAM)
+                0x0000000000020000                heap_top = (ORIGIN (RAM) + 0x10000)
+                0x0000000008010000                _estack = (ORIGIN (RAM) + 0x8000000)
+LOAD /usr/lib/gcc/arm-none-eabi/4.9.3/libgcc.a
+LOAD /usr/arm-none-eabi/lib/thumb/libc.a
+OUTPUT(kernel.elf elf32-littlearm)
+
+.comment        0x0000000000000000       0x70
+ .comment       0x0000000000000000       0x70 /home/rtos18007/rtos18007/FreeRTOS_RaspPi/build/FreeRTOS/Source/portable/GCC/RaspberryPi/port.o
+                                         0x71 (size before relaxing)
+ .comment       0x0000000000000000       0x71 /home/rtos18007/rtos18007/FreeRTOS_RaspPi/build/FreeRTOS/Source/portable/GCC/RaspberryPi/portisr.o
+ .comment       0x0000000000000000       0x71 /home/rtos18007/rtos18007/FreeRTOS_RaspPi/build/FreeRTOS/Source/croutine.o
+ .comment       0x0000000000000000       0x71 /home/rtos18007/rtos18007/FreeRTOS_RaspPi/build/FreeRTOS/Source/list.o
+ .comment       0x0000000000000000       0x71 /home/rtos18007/rtos18007/FreeRTOS_RaspPi/build/FreeRTOS/Source/queue.o
+ .comment       0x0000000000000000       0x71 /home/rtos18007/rtos18007/FreeRTOS_RaspPi/build/FreeRTOS/Source/priority_queue.o
+ .comment       0x0000000000000000       0x71 /home/rtos18007/rtos18007/FreeRTOS_RaspPi/build/FreeRTOS/Source/tasks.o
+ .comment       0x0000000000000000       0x71 /home/rtos18007/rtos18007/FreeRTOS_RaspPi/build/Demo/Drivers/interrupts.o
+ .comment       0x0000000000000000       0x71 /home/rtos18007/rtos18007/FreeRTOS_RaspPi/build/Demo/Drivers/gpio.o
+ .comment       0x0000000000000000       0x71 /home/rtos18007/rtos18007/FreeRTOS_RaspPi/build/Demo/Drivers/uart.o
+ .comment       0x0000000000000000       0x71 /home/rtos18007/rtos18007/FreeRTOS_RaspPi/build/Demo/Drivers/print_473.o
+ .comment       0x0000000000000000       0x71 /home/rtos18007/rtos18007/FreeRTOS_RaspPi/build//FreeRTOS/Source/portable/MemMang/heap_4.o
+ .comment       0x0000000000000000       0x71 /home/rtos18007/rtos18007/FreeRTOS_RaspPi/build/Demo/main.o
+
+.ARM.attributes
+                0x0000000000000000       0x2c
+ .ARM.attributes
+                0x0000000000000000       0x2e /home/rtos18007/rtos18007/FreeRTOS_RaspPi/build/FreeRTOS/Source/portable/GCC/RaspberryPi/port.o
+ .ARM.attributes
+                0x000000000000002e       0x2e /home/rtos18007/rtos18007/FreeRTOS_RaspPi/build/FreeRTOS/Source/portable/GCC/RaspberryPi/portisr.o
+ .ARM.attributes
+                0x000000000000005c       0x2e /home/rtos18007/rtos18007/FreeRTOS_RaspPi/build/FreeRTOS/Source/croutine.o
+ .ARM.attributes
+                0x000000000000008a       0x2e /home/rtos18007/rtos18007/FreeRTOS_RaspPi/build/FreeRTOS/Source/list.o
+ .ARM.attributes
+                0x00000000000000b8       0x2e /home/rtos18007/rtos18007/FreeRTOS_RaspPi/build/FreeRTOS/Source/queue.o
+ .ARM.attributes
+                0x00000000000000e6       0x2e /home/rtos18007/rtos18007/FreeRTOS_RaspPi/build/FreeRTOS/Source/priority_queue.o
+ .ARM.attributes
+                0x0000000000000114       0x2e /home/rtos18007/rtos18007/FreeRTOS_RaspPi/build/FreeRTOS/Source/tasks.o
+ .ARM.attributes
+                0x0000000000000142       0x2e /home/rtos18007/rtos18007/FreeRTOS_RaspPi/build/Demo/Drivers/interrupts.o
+ .ARM.attributes
+                0x0000000000000170       0x2e /home/rtos18007/rtos18007/FreeRTOS_RaspPi/build/Demo/Drivers/gpio.o
+ .ARM.attributes
+                0x000000000000019e       0x2e /home/rtos18007/rtos18007/FreeRTOS_RaspPi/build/Demo/Drivers/uart.o
+ .ARM.attributes
+                0x00000000000001cc       0x2e /home/rtos18007/rtos18007/FreeRTOS_RaspPi/build/Demo/Drivers/print_473.o
+ .ARM.attributes
+                0x00000000000001fa       0x2e /home/rtos18007/rtos18007/FreeRTOS_RaspPi/build//FreeRTOS/Source/portable/MemMang/heap_4.o
+ .ARM.attributes
+                0x0000000000000228       0x14 /home/rtos18007/rtos18007/FreeRTOS_RaspPi/build/Demo/startup.o
+ .ARM.attributes
+                0x000000000000023c       0x2e /home/rtos18007/rtos18007/FreeRTOS_RaspPi/build/Demo/main.o
+ .ARM.attributes
+                0x000000000000026a       0x18 /usr/lib/gcc/arm-none-eabi/4.9.3/libgcc.a(_udivsi3.o)
+ .ARM.attributes
+                0x0000000000000282       0x18 /usr/lib/gcc/arm-none-eabi/4.9.3/libgcc.a(_dvmd_tls.o)
+ .ARM.attributes
+                0x000000000000029a       0x30 /usr/arm-none-eabi/lib/thumb/libc.a(lib_a-memcpy.o)
+ .ARM.attributes
+                0x00000000000002ca       0x30 /usr/arm-none-eabi/lib/thumb/libc.a(lib_a-memset.o)
+ .ARM.attributes
+                0x00000000000002fa       0x30 /usr/arm-none-eabi/lib/thumb/libc.a(lib_a-strncpy.o)
+
+.debug_frame    0x0000000000000000       0xa4
+ .debug_frame   0x0000000000000000       0x20 /usr/lib/gcc/arm-none-eabi/4.9.3/libgcc.a(_udivsi3.o)
+ .debug_frame   0x0000000000000020       0x2c /usr/arm-none-eabi/lib/thumb/libc.a(lib_a-memcpy.o)
+ .debug_frame   0x000000000000004c       0x2c /usr/arm-none-eabi/lib/thumb/libc.a(lib_a-memset.o)
+ .debug_frame   0x0000000000000078       0x2c /usr/arm-none-eabi/lib/thumb/libc.a(lib_a-strncpy.o)

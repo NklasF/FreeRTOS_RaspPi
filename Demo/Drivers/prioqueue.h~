@@ -1,0 +1,11 @@
+#include <queue.h>
+
+
+
+xPrioQueueHandle xPrioQueueCreate(unsigned portBASE_TYPE uxQueueLength,unsigned portBASE_TYPE uxItemSize);
+
+void vPrioQueueDelete( xPrioQueueHandle pxQueue );
+
+portBASE_TYPE xPrioQueuePeekHigh( xPrioQueueHandle xQueue, void *pvBuffer, portTickType xTicksToWait );
+
+portBASE_TYPE xPrioQueueReceiveHigh(xQueueHandle xQueue, void *pvBuffer, portTickType xTicksToWait);

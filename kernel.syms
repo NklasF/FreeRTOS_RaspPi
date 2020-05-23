@@ -1,0 +1,249 @@
+
+kernel.elf:     file format elf32-littlearm
+
+SYMBOL TABLE:
+00008000 l    d  .init	00000000 .init
+00010000 l    d  .text	00000000 .text
+000169f0 l    d  .rodata	00000000 .rodata
+00016a68 l    d  .text.memcpy	00000000 .text.memcpy
+00016ae8 l    d  .text.memset	00000000 .text.memset
+00016b7c l    d  .text.strncpy	00000000 .text.strncpy
+00016bf8 l    d  .data	00000000 .data
+00016c08 l    d  .bss	00000000 .bss
+00000000 l    d  .comment	00000000 .comment
+00000000 l    d  .ARM.attributes	00000000 .ARM.attributes
+00000000 l    d  .debug_frame	00000000 .debug_frame
+00000000 l    df *ABS*	00000000 /home/rtos18007/rtos18007/FreeRTOS_RaspPi/build/Demo/startup.o
+00008020 l       .init	00000000 reset_handler
+00008024 l       .init	00000000 undefined_handler
+00008028 l       .init	00000000 swi_handler
+0000802c l       .init	00000000 prefetch_handler
+00008030 l       .init	00000000 data_handler
+00008034 l       .init	00000000 unused_handler
+00008038 l       .init	00000000 irq_handler
+0000803c l       .init	00000000 fiq_handler
+00008040 l       .init	00000000 reset
+00016448 l       .text	00000000 undefined_instruction
+0001644c l       .text	00000000 prefetch_abort
+00016450 l       .text	00000000 data_abort
+00016454 l       .text	00000000 unused
+00016458 l       .text	00000000 fiq
+00008088 l       .init	00000000 zero_loop
+0001645c l       .text	00000000 hang
+00000000 l    df *ABS*	00000000 port.c
+000169f0 l     O .rodata	00000004 pRegs
+000102a4 l     F .text	00000094 prvSetupTimerInterrupt
+00000000 l    df *ABS*	00000000 portisr.c
+00000000 l    df *ABS*	00000000 croutine.c
+00016c0c l       .bss	00000000 pxReadyCoRoutineLists
+00016c34 l       .bss	00000000 xDelayedCoRoutineList1
+00016c48 l       .bss	00000000 xDelayedCoRoutineList2
+00016c5c l       .bss	00000000 pxDelayedCoRoutineList
+00016c60 l       .bss	00000000 pxOverflowDelayedCoRoutineList
+00016c64 l       .bss	00000000 xPendingReadyCoRoutineList
+00016c7c l       .bss	00000000 uxTopCoRoutineReadyPriority
+00016c80 l       .bss	00000000 xCoRoutineTickCount
+00016c84 l       .bss	00000000 xLastTickCount
+00016c88 l       .bss	00000000 xPassedTicks
+00010bf4 l     F .text	000000a4 prvInitialiseCoRoutineLists
+00010818 l     F .text	000000e8 prvCheckPendingReadyList
+00010900 l     F .text	000001cc prvCheckDelayedList
+00000000 l    df *ABS*	00000000 list.c
+00000000 l    df *ABS*	00000000 queue.c
+00011790 l     F .text	00000130 prvCopyDataToQueue
+00011ad4 l     F .text	0000004c prvIsQueueFull
+00011950 l     F .text	00000100 prvUnlockQueue
+000118c0 l     F .text	00000090 prvCopyDataFromQueue
+00011a50 l     F .text	00000044 prvIsQueueEmpty
+00000000 l    df *ABS*	00000000 priority_queue.c
+00000000 l    df *ABS*	00000000 tasks.c
+00016c90 l       .bss	00000000 pxReadyTasksLists
+00016cf4 l       .bss	00000000 xDelayedTaskList1
+00016d08 l       .bss	00000000 xDelayedTaskList2
+00016d1c l       .bss	00000000 pxDelayedTaskList
+00016d20 l       .bss	00000000 pxOverflowDelayedTaskList
+00016d24 l       .bss	00000000 xPendingReadyList
+00016d38 l       .bss	00000000 xTasksWaitingTermination
+00016d4c l       .bss	00000000 uxTasksDeleted
+00016d50 l       .bss	00000000 xSuspendedTaskList
+00016d64 l       .bss	00000000 uxCurrentNumberOfTasks
+00016d68 l       .bss	00000000 xTickCount
+00016d6c l       .bss	00000000 uxTopUsedPriority
+00016d70 l       .bss	00000000 uxTopReadyPriority
+00016d74 l       .bss	00000000 xSchedulerRunning
+00016d78 l       .bss	00000000 uxSchedulerSuspended
+00016d7c l       .bss	00000000 uxMissedTicks
+00016d80 l       .bss	00000000 xMissedYield
+00016d84 l       .bss	00000000 xNumOfOverflows
+00016d88 l       .bss	00000000 uxTaskNumber
+00016bfc l     O .data	00000004 xNextTaskUnblockTime
+00014830 l     F .text	000000b4 prvAllocateTCBAndStack
+0001454c l     F .text	000000bc prvInitialiseTCBVariables
+00014608 l     F .text	000000bc prvInitialiseTaskLists
+0001477c l     F .text	000000b4 prvAddCurrentTaskToDelayedList
+0001451c l     F .text	00000030 prvIdleTask
+000146c4 l     F .text	000000b8 prvCheckTasksWaitingTermination
+000148e4 l     F .text	00000030 prvDeleteTCB
+00000000 l    df *ABS*	00000000 interrupts.c
+00016d8c l       .bss	00000000 g_VectorTable
+000169fc l     O .rodata	00000004 pRegs
+00014914 l     F .text	00000020 irqEnable
+00014934 l     F .text	00000020 irqDisable
+00014a3c l     F .text	0000004c stubHandler
+00000000 l    df *ABS*	00000000 gpio.c
+00000000 l    df *ABS*	00000000 uart.c
+00000000 l    df *ABS*	00000000 print_473.c
+00015868 l     F .text	00000060 printchar
+000158c8 l     F .text	00000138 prints
+00015a00 l     F .text	00000184 printi
+00015b84 l     F .text	00000354 print
+00000000 l    df *ABS*	00000000 heap_4.c
+00016fd0 l       .bss	00000000 xHeap
+00016a0c l     O .rodata	00000002 heapSTRUCT_SIZE
+00016a10 l     O .rodata	00000004 xTotalHeapSize
+00017fd0 l       .bss	00000000 xStart
+00017fd8 l       .bss	00000000 pxEnd
+00016c00 l     O .data	00000004 xFreeBytesRemaining
+00016224 l     F .text	000000d4 prvHeapInit
+000162f8 l     F .text	00000150 prvInsertBlockIntoFreeList
+00000000 l    df *ABS*	00000000 main.c
+00000000 l    df *ABS*	00000000 _udivsi3.o
+000168a4 l       .text	00000000 .udivsi3_skip_div0_test
+00000000 l    df *ABS*	00000000 _dvmd_tls.o
+00000000 l    df *ABS*	00000000 memcpy.c
+00000000 l    df *ABS*	00000000 memset.c
+00000000 l    df *ABS*	00000000 strncpy.c
+00000000 l    df *ABS*	00000000 
+000169c0 l     F .text	0000000c __strncpy_from_arm
+000169cc l     F .text	0000000c __memset_from_arm
+000169d8 l     F .text	0000000c __memcpy_from_arm
+00011dfc g     F .text	000001b8 xPriorityQueueGenericSend
+000161ec g     F .text	00000024 xPortGetFreeHeapSize
+00010270 g     F .text	00000034 vTickISR
+00010568 g     F .text	00000060 vPortExitCritical
+00012f30 g     F .text	00000058 uxTaskPriorityGet
+00014c48 g     F .text	000000d0 DisableInterrupt
+00011c88 g     F .text	00000174 xPriorityQueueReset
+00010c98 g     F .text	0000008c xCoRoutineRemoveFromEventList
+00011334 g     F .text	000000dc xQueueGenericSendFromISR
+000150d4 g     F .text	000001a8 EnableGpioDetect
+00016c8c g     O .bss	00000004 pxCurrentTCB
+00014954 g     F .text	000000e8 irqHandler
+00014d48 g     F .text	000000d8 SetGpioFunction
+000120f0 g     F .text	00000100 prvUnlockPriorityQueue
+00012f88 g     F .text	000001a4 vTaskPrioritySet
+00010240 g     F .text	0000001c xPortStartScheduler
+0001356c g     F .text	00000034 vTaskEndScheduler
+000080a4 g       .init	00000000 __module_entries_end
+00016a68 g     F .text.memcpy	00000080 memcpy
+000141c0 g     F .text	00000098 vTaskPlaceOnEventList
+000129e0 g     F .text	000002c8 xTaskGenericCreate
+0001322c g     F .text	0000007c xTaskIsTaskSuspended
+00016174 g     F .text	00000078 vPortFree
+000105d0 g     F .text	00000168 xCoRoutineCreate
+000168a4 g     F .text	000000f4 .hidden __udivsi3
+00012644 g     F .text	00000058 vPriorityQueueDelete
+00010db0 g     F .text	00000094 vListInsertEnd
+00020000 g       *ABS*	00000000 heap_top
+00010f18 g     F .text	00000094 vListRemove
+00015564 g     F .text	00000180 uart_putl
+00012098 g     F .text	00000058 prvIsPriorityQueueFull
+000154ac g     F .text	00000028 GET32
+0001339c g     F .text	0000011c xTaskResumeFromISR
+00015480 g     F .text	0000002c PUT32
+00010d88 g     F .text	00000028 vListInitialiseItem
+0001047c g     F .text	000000ac vFreeRTOS_ISR
+00017fe0 g       .bss	00000000 __bss_end
+00015fac g     F .text	000001c8 pvPortMalloc
+00011760 g     F .text	00000030 vQueueDelete
+00015ed8 g     F .text	00000040 printf_473
+0001025c g     F .text	00000014 vPortEndScheduler
+00010d24 g     F .text	00000064 vListInitialise
+00013770 g     F .text	00000034 xTaskGetTickCount
+00011188 g     F .text	000001ac xQueueGenericSend
+00015520 g     F .text	00000044 uart_puts
+000080a4 g       .init	00000000 __module_entries_size
+00014258 g     F .text	00000118 xTaskRemoveFromEventList
+00011b68 g     F .text	00000120 xPriorityQueueCreate
+00012820 g     F .text	000001c0 xPriorityQueueGenericReceiveFromISR
+00012ca8 g     F .text	000000fc vTaskDelete
+000103cc g     F .text	000000b0 vPortYieldProcessor
+00015728 g     F .text	00000140 uart_init
+000143b4 g     F .text	000000f4 xTaskCheckForTimeOut
+00014f24 g     F .text	000000f4 PudGpio
+00010acc g     F .text	00000128 vCoRoutineSchedule
+00016460 g     F .text	000000bc vTask31
+00016c78 g     O .bss	00000004 pxCurrentCoRoutine
+0001273c g     F .text	000000e4 xPriorityQueueGenericSendFromISR
+00008000 g       .init	00000000 _start
+000135a0 g     F .text	0000002c vTaskSuspendAll
+000137a4 g     F .text	00000038 xTaskGetTickCountFromISR
+00014ed4 g     F .text	00000050 ReadGpio
+00013f88 g     F .text	00000058 vTaskSetApplicationTaskTag
+0001527c g     F .text	000001b0 DisableGpioDetect
+00016b7c g     F .text.strncpy	0000007c strncpy
+000132a8 g     F .text	000000f4 vTaskResume
+000140b8 g     F .text	00000108 vTaskSwitchContext
+0001542c g     F .text	00000054 ClearGpioInterrupt
+000169b8  w    F .text	00000004 .hidden __aeabi_ldiv0
+0001312c g     F .text	00000100 vTaskSuspend
+000137dc g     F .text	00000024 uxTaskGetNumberOfTasks
+00013800 g     F .text	00000788 vTaskIncrementTick
+000156e4 g     F .text	00000044 uart_getc
+00014b78 g     F .text	000000d0 EnableInterrupt
+000080a4 g       .init	00000000 __module_entries_start
+00016c08 g       .bss	00000000 __bss_start
+00014d30 g     F .text	00000018 DisableInterrupts
+00016ae8 g     F .text.memset	00000094 memset
+000144cc g     F .text	00000050 uxTaskGetTaskNumber
+00016694 g     F .text	00000210 main
+0001269c g     F .text	0000006c uxPriorityQueueTotalMessagesWaiting
+00010e44 g     F .text	000000d4 vListInsert
+000154d4 g     F .text	0000004c uart_putc
+000168a4 g     F .text	00000000 .hidden __aeabi_uidiv
+00013fe0 g     F .text	0000005c xTaskGetApplicationTaskTag
+00012da4 g     F .text	0000010c vTaskDelayUntil
+00010000 g       .bss	00000000 heap_low
+0001161c g     F .text	000000e0 xQueueReceiveFromISR
+00014e50 g     F .text	00000084 SetGpio
+00010338 g     F .text	00000094 vPortISRStartFirstTask
+000110c0 g     F .text	000000c8 xQueueGenericCreate
+00014e20 g     F .text	00000030 SetGpioDirection
+000121f0 g     F .text	000002ec xPriorityQueueGenericReceive
+0001651c g     F .text	000000bc vTask62
+00012708 g     F .text	00000034 uxPriorityQueueMessagesWaiting
+000135cc g     F .text	000001a4 xTaskResumeAll
+000134b8 g     F .text	000000b4 vTaskStartScheduler
+00014afc g     F .text	0000007c RegisterInterrupt
+00015f60 g     F .text	0000004c snprintf_473
+00011b20 g     F .text	00000048 xQueueIsQueueFullFromISR
+00010738 g     F .text	000000e0 vCoRoutineAddToDelayedList
+000124dc g     F .text	000000e8 prvCopyDataFromPriorityQueue
+000144a8 g     F .text	00000024 vTaskMissedYield
+00015f18 g     F .text	00000048 sprintf_473
+000125c4 g     F .text	00000080 prvIsPriorityQueueEmpty
+000116fc g     F .text	00000034 uxQueueMessagesWaiting
+00011410 g     F .text	0000020c xQueueGenericReceive
+08010000 g       *ABS*	00000000 _estack
+00016998 g     F .text	00000020 .hidden __aeabi_uidivmod
+00010fac g     F .text	00000114 xQueueGenericReset
+00016bf8 g     O .data	00000004 ulCriticalNesting
+00016210 g     F .text	00000014 vPortInitialiseBlocks
+00011fb4 g     F .text	000000e4 prvCopyDataToPriorityQueue
+000165d8 g     F .text	000000bc vTask124
+00012eb0 g     F .text	00000080 vTaskDelay
+000169b8  w    F .text	00000004 .hidden __aeabi_idiv0
+00015018 g     F .text	000000bc PudMultiGpio
+00010000 g     F .text	00000240 pxPortInitialiseStack
+00016a00 g     O .rodata	00000004 pRegs
+00014d18 g     F .text	00000018 EnableInterrupts
+00014370 g     F .text	00000044 vTaskSetTimeOutState
+00010528 g     F .text	00000040 vPortEnterCritical
+00014a88 g     F .text	00000074 InitInterruptController
+00011730 g     F .text	00000030 uxQueueMessagesWaitingFromISR
+00011a94 g     F .text	00000040 xQueueIsQueueEmptyFromISR
+0001403c g     F .text	0000007c xTaskCallApplicationTaskHook
+00016c08 g     O .bss	00000004 g_bStarted
+00017fdc g     O .bss	00000004 allocated
+
+
